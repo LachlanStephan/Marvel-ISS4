@@ -3,38 +3,38 @@
 // components takes precedence over default styles.
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import Header from './features/header';
-import Main from './features/main';
-import Footer from './features/footer';
+import Header from './components/common/header';
+import Footer from './components/common/footer';
 import React from "react";
-import Heroes from './pages/page1';
-import Comics from './pages/page2';
-import Featured from './pages/page3';
+import Heroes from './components/pages/Heroes';
+import Comics from './components/pages/Comics';
+import Featured from './components/pages/Featured';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import { Container, Row, Col } from 'reactstrap';
 
 export function Links() {
   return (
     <Router>
-      <div className="linksWrapper">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/Heroes">Heroes</Link>
-            </li>
-            <li>
-              <Link to="/Comics">Comics</Link>
-            </li>
-            <li>
-              <Link to="/Featured">Featured</Link>
-            </li>
-          </ul>
-        </nav>
+      <Container className="linksContainer">
+        <Row>
+          <Col>
+            <Link to="/Heroes">Heroes</Link>
+          </Col>
 
+          <Col>
+            <Link to="/Comics">Comics</Link>
+          </Col>
+
+          <Col>
+            <Link to="/Featured">Featured</Link>
+          </Col>
+       </Row>
+      </Container>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
@@ -48,7 +48,6 @@ export function Links() {
             <Featured />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }
@@ -57,7 +56,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
       <Links />
       <Footer />
    </div>
