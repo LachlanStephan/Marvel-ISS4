@@ -8,9 +8,9 @@ function Header() {
        <Col> 
         <div className="headerWrapper">
           <h1>Marvel</h1>
-          <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+            <i className="fas fa-search" aria-hidden="true"></i>
+            <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
             aria-label="Search" />
           </form>
         </div>
