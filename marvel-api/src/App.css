@@ -47,10 +47,8 @@ a:visited {
   margin: 0 auto;
 }
 
-.footerP {
-  height: 10em;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
+/* comics pages */
+.comicContainer {
+  padding: 2em;
 }
+

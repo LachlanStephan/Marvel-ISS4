@@ -1,14 +1,16 @@
 import React from 'react';
-// import { Container, Row, Col } from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 
 function Footer() {
-  return (
-    <div>
-      <p className="footerP">
-      this is the footer
-      </p>
-    </div>
-  )
+    return (
+        <Container>
+            <Row>
+                <Col>
+                    <h1>Footer</h1>
+                </Col>
+            </Row>
+        </Container>
+    )
 }
 
 export default Footer;

@@ -22,7 +22,7 @@ export function Links() {
                     </Col>
 
                     <Col>
-                        <Link to="/Comic" autofocus="true">Comics</Link>
+                        <Link to="/Comic">Comics</Link>
                     </Col>
 
                     <Col>
@@ -50,19 +50,13 @@ export function Links() {
     );
 }
 
-function apiCall() {
-  fetch('http://gateway.marvel.com/v1/public/comics?apikey=f0b6fb5f90e9139ed2f1514d0139fb' +
-              '15&ts=1&hash=ccb8f319be84ea5586be53927142ff35')
-      .then(response => response.json())
-      .then(response => console.log(response));
-    
-}
+
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <Links/> {apiCall()}
+            <Links/> 
             <Footer/>
         </div>
     );
