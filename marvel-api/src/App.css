@@ -1,7 +1,10 @@
+* {
+  text-align: center;
+}
+
 Body {
   margin: 0;
   padding: 0;
-  text-align: center;
   background-color: #EC1D24;
 }
 
@@ -39,16 +42,5 @@ a:visited {
   text-decoration: none;
 }
 
-.heroesP, .comicsP, .featuredP {
-  height: 50vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
 
-/* comics pages */
-.comicContainer {
-  padding: 2em;
-}
 
