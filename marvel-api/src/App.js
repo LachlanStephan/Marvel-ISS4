@@ -26,7 +26,7 @@ export function Links() {
                     </Col>
 
                     <Col>
-                        <Link to="/Featured">Featured</Link>
+                        <Link to="/Featured">creators</Link>
                     </Col>
                 </Row>
             </Container>

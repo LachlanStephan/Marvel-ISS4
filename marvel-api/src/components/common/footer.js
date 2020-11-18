@@ -6,7 +6,6 @@ function Footer() {
         <Container>
             <Row>
                 <Col>
-                    <h1>Footer</h1>
                 </Col>
             </Row>
         </Container>

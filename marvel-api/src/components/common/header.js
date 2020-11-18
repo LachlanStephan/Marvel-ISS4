@@ -3,10 +3,10 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Header() {
   return (
-    <Container>
+    <Container className="headerWrapper">
       <Row>
        <Col> 
-        <div className="headerWrapper">
+        <div>
           <h1>Marvel</h1>
           <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
             <i className="fas fa-search" aria-hidden="true"></i>

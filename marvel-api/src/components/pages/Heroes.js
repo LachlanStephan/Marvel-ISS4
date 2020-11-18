@@ -1,38 +1,56 @@
 import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
+import axios from 'axios';
+import {Spinner} from 'reactstrap';
+
 export default class Heroes extends React.Component {
 
     state = {
         loading: true,
-        title: null
-    };
+        heroes: null
+    }
 
-    async componentDidMount() {
-        const url = "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=f0b6fb5f90e9139ed2f1514d0" +
-                "139fb15&hash=ccb8f319be84ea5586be53927142ff35";
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
-        this.setState({ thumbnail: data.results, loading: false });
+    componentDidMount() {
+        axios
+            .get("http://gateway.marvel.com/v1/public/characters?ts=1&apikey=f0b6fb5f90e9139ed2f15" +
+                "14d0139fb15&hash=ccb8f319be84ea5586be53927142ff35")
+            .then((Response) => {
+                console.log(Response)
+                this.setState({heroes: Response.data.data.results, loading: false})
+            })
     }
 
     render() {
+        if (this.state.loading) {
+            return (
+                <Container>
+                    <Row><Spinner color="primary"/></Row>
+                </Container>
+            )
+        }
+
+        if (!this.state.heroes) {
+            return (
+                <Container>
+                    <Row>Nothing to show</Row>
+                </Container>
+            )
+        }
+
         return (
-            <Container>
-                <Row>
-                    <Col>
-                        {this.state.loading || !this.state.thumbnail
-                            ? (
-                                <Col>Loading...</Col>
-                            )
-                            : (
-                                <Col>this.state.data.results.thumbnail</Col>
-                            )}
-                    </Col>
-                </Row>
+            <Container className="contentContainer">
+                {this
+                    .state
+                    .heroes
+                    .map((card, index) => (
+                        <Container className="comicContainer" key={index}>
+                            <Row>
+                                <Col>{card.name}</Col>
+                                <Col>{card.description}</Col>
+                            </Row>
+                        </Container>
+                    ))}
             </Container>
-        )
+        );
     }
 };
-
-
