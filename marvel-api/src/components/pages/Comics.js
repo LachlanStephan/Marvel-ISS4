@@ -33,7 +33,7 @@ export default class Comics extends React.Component {
         if (this.state.loading) {
             return (
                 <Container>
-                    <Row><Spinner color="primary"/></Row>
+                    <Row><Spinner color="primary" /></Row>
                 </Container>
             )
         }
@@ -52,7 +52,7 @@ export default class Comics extends React.Component {
                     .state
                     .comic
                     .map((card, index) => (
-                        <Card className="comicContainer" key={index}>
+                        <Card className="cardContainer" key={index}>
                             <CardImg src={`${card.thumbnail.path}.${card.thumbnail.extension}`} />
                             <CardTitle>{card.title}</CardTitle>
                             <CardText>{card.description}</CardText>

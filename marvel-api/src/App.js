@@ -22,7 +22,7 @@ export function Links() {
                     </Col>
 
                     <Col>
-                        <Link to="/Comic">Comics</Link>
+                        <Link to="/Comics">Comics</Link>
                     </Col>
 
                     <Col>
@@ -34,15 +34,15 @@ export function Links() {
             renders the first one that matches the current URL. */}
             <Switch>
                 <Route path="/Heroes">
-                    <Heroes/>
+                    <Heroes />
                 </Route>
                 <Route path="/Comics">
-                    <Comics/>
+                    <Comics />
                 </Route>
                 <Route path="/Featured">
-                    <Featured/>
+                    <Featured />
                 </Route>
-                <Route path="*" component = {Comics}>
+                <Route path="*" component={Heroes}>
 
                 </Route>
             </Switch>
@@ -55,9 +55,9 @@ export function Links() {
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Links/> 
-            <Footer/>
+            <Header />
+            <Links />
+            <Footer />
         </div>
     );
 }

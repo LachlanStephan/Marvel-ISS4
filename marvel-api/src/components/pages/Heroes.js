@@ -2,6 +2,15 @@ import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import {Spinner} from 'reactstrap';
+import {
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardTitle,
+    CardSubtitle,
+}
+    from 'reactstrap';
 
 export default class Heroes extends React.Component {
 
@@ -24,7 +33,7 @@ export default class Heroes extends React.Component {
         if (this.state.loading) {
             return (
                 <Container>
-                    <Row><Spinner color="primary"/></Row>
+                    <Row><Spinner color="primary" /></Row>
                 </Container>
             )
         }
@@ -38,19 +47,18 @@ export default class Heroes extends React.Component {
         }
 
         return (
-            <Container className="contentContainer">
+            <div className="contentContainer">
                 {this
                     .state
                     .heroes
                     .map((card, index) => (
-                        <Container className="comicContainer" key={index}>
-                            <Row>
-                                <Col>{card.name}</Col>
-                                <Col>{card.description}</Col>
-                            </Row>
-                        </Container>
+                        <Card className="cardContainer" key={index}>
+                            <CardImg src={`${card.thumbnail.path}.${card.thumbnail.extension}`} />
+                            <CardTitle>{card.name}</CardTitle>
+                            <CardText>{card.description}</CardText>
+                        </Card>
                     ))}
-            </Container>
+            </div>
         );
     }
 };
