@@ -26,7 +26,7 @@ export function Links() {
                     </Col>
 
                     <Col>
-                        <Link to="/Featured">creators</Link>
+                        <Link to="/Featured">Series</Link>
                     </Col>
                 </Row>
             </Container>
@@ -53,6 +53,7 @@ export function Links() {
 
 
 function App() {
+
     return (
         <div className="App">
             <Header />

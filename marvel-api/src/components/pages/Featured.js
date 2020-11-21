@@ -2,8 +2,10 @@ import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import {Spinner} from 'reactstrap';
+import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
 
 export default class Featured extends React.Component {
+
     state = {
         loading: true,
         featured: null
@@ -11,8 +13,8 @@ export default class Featured extends React.Component {
 
     componentDidMount() {
         axios
-            .get("http://gateway.marvel.com/v1/public/creators?ts=1&apikey=f0b6fb5f90e9139ed2f1514" +
-                "d0139fb15&hash=ccb8f319be84ea5586be53927142ff35")
+            .get("http://gateway.marvel.com/v1/public/series?ts=1&apikey=f0b6fb5f90e9139ed2f1514d0" +
+                "139fb15&hash=ccb8f319be84ea5586be53927142ff35")
             .then((Response) => {
                 console.log(Response)
                 this.setState({featured: Response.data.data.results, loading: false})
@@ -23,7 +25,9 @@ export default class Featured extends React.Component {
         if (this.state.loading) {
             return (
                 <Container>
-                    <Row><Spinner color="primary"/></Row>
+                    <Row>
+                        <Col className="spinner"><Spinner color="primary"/></Col>
+                    </Row>
                 </Container>
             )
         }
@@ -37,18 +41,18 @@ export default class Featured extends React.Component {
         }
 
         return (
-            <Container className="contentContainer">
+            <div className="contentContainer">
                 {this
                     .state
                     .featured
                     .map((card, index) => (
-                        <Container className="comicContainer" key={index}>
-                            <Row>
-                                <Col>{card.firstName}</Col>
-                            </Row>
-                        </Container>
+                        <Card className="cardContainer" key={index}>
+                            <CardImg src={`${card.thumbnail.path}.${card.thumbnail.extension}`}/>
+                            <CardTitle>{card.title}</CardTitle>
+                            <CardText className="hide">{card.startYear}</CardText>
+                        </Card>
                     ))}
-            </Container>
+            </div>
         );
     }
 };

@@ -10,30 +10,73 @@ Body {
 }
 
 /* Header */
-.active-cyan input.form-control[type=text] {
-  border-bottom: 1px solid #4dd0e1;
-  box-shadow: 0 1px 0 0 #4dd0e1;
-}
-
 .headerWrapper {
   padding: 2em;
   color: white;
 }
 
+.label {
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+h1 {
+  text-shadow: 1px 2px black;
+  color: black
+}
+
+input {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid black;
+  box-shadow: 5px 1px black;
+  background-color: beige;
+  color: black;
+}
+
+input:active {
+  background-color: beige;
+  color: black;
+}
+
+input:focus {
+    outline-width: 0;
+    background-color: bisque;
+    color: black;
+}
+
+/* Search bar */
+button {
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 10em;
+  border-radius: 20px;
+  border: 1px solid red;
+  box-shadow: 5px 5px darkred;
+  background-color: beige;
+}
+
+button:active, button:focus {
+  outline: none;
+  background-color: bisque;
+}
+
 /* Links */
 .linksContainer {
   padding: auto;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 a {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
-  border: 3px solid white;
+  border-radius: 20px;
+  border: 1px solid red;
+  box-shadow: 5px 5px darkred;
   padding: 0.5em;
   border-radius: 5px;
-  background-color: white;
+  background-color: beige;
 }
 
 a:focus, a:active {
@@ -43,6 +86,7 @@ a:focus, a:active {
   padding: 0.5em;
   border-radius: 5px;
   outline: none;
+  background-color: bisque;
 }
 
 a:visited {
@@ -57,6 +101,10 @@ a:hover {
 }
 
 /* content - middle of page */
+.spinner {
+  padding: 2em;
+}
+
 .contentContainer {
  display: flex;
  flex-direction: row;
@@ -71,21 +119,32 @@ a:hover {
  flex-direction: column;
  width: 400px;
  margin: 1em;
- padding: 1em;
+ padding: 0.5em;
  text-align: center;
  align-items: center;
  border-radius: 10px;
  transition: background-color 0.6s ease;
+ background-color: beige;
 }
 
 .card:hover {
-  background-color: lightgrey;
+  background-color: black;
+  color: white;
 }
+
+.card:hover > .card-text {
+  visibility: visible;
+}
+
+.hide {
+  display: none;
+}
+
+.card:hover > .hide {
+  display: block;
+} 
 
 .card-img {
   padding: 1em;
-  height: auto;
   width: 300px;
 }
-
-/* comics */
