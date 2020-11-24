@@ -4,7 +4,6 @@
 
 Body {
   margin: 0;
-  background-color: black;
   padding: 0;
   background-image: url(./images/background2.jpg);
 }
@@ -12,26 +11,27 @@ Body {
 /* Header */
 .headerWrapper {
   padding: 2em;
-  color: white;
 }
 
-.label {
-  text-transform: uppercase;
-  padding: 1em;
-}
-
-h1 {
+h1, h3 {
   text-shadow: 1px 2px black;
   color: black
 }
 
+/* Search bar */
+label {
+  text-transform: uppercase;
+  padding: 0.5em;
+}
+
 input {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
   border: 3px solid black;
   box-shadow: 5px 1px black;
   background-color: beige;
   color: black;
+  padding: 0.5em;
 }
 
 input:active {
@@ -45,8 +45,8 @@ input:focus {
     color: black;
 }
 
-/* Search bar */
-button {
+button, .reset {
+  margin: 0 auto;
   margin-top: 1em;
   padding: 0.5em;
   width: 10em;
@@ -105,6 +105,10 @@ a:hover {
   padding: 2em;
 }
 
+.form {
+  display: grid;
+}
+
 .contentContainer {
  display: flex;
  flex-direction: row;
@@ -115,7 +119,7 @@ a:hover {
  justify-content: space-evenly;
 }
 
-.card { 
+.card, .featuredCard { 
  flex-direction: column;
  width: 400px;
  margin: 1em;
@@ -125,6 +129,8 @@ a:hover {
  border-radius: 10px;
  transition: background-color 0.6s ease;
  background-color: beige;
+ border: 1px solid red;
+ box-shadow: 5px 5px darkred;
 }
 
 .card:hover {
@@ -148,3 +154,18 @@ a:hover {
   padding: 1em;
   width: 300px;
 }
+
+
+/* Desktop view */
+@media only screen and (min-width: 600px) {
+  input {
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+  }
+
+}
+
+

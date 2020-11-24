@@ -5,10 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
-import React from "react";
-import Heroes from './components/pages/Heroes';
-import Comics from './components/pages/Comics';
-import Featured from './components/pages/Featured';
+import Heroes from './components/pages/HeroesPage.js';
+import Comics from './components/pages/ComicPage.js';
+import Featured from './components/pages/SeriesPage.js';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Container, Row, Col} from 'reactstrap';
 
@@ -34,31 +33,27 @@ export function Links() {
             renders the first one that matches the current URL. */}
             <Switch>
                 <Route path="/Heroes">
-                    <Heroes />
+                    <Heroes/>
                 </Route>
                 <Route path="/Comics">
-                    <Comics />
+                    <Comics/>
                 </Route>
                 <Route path="/Featured">
-                    <Featured />
+                    <Featured/>
                 </Route>
-                <Route path="*" component={Heroes}>
-
-                </Route>
+                <Route path="*" component={Heroes}></Route>
             </Switch>
         </Router>
     );
 }
 
-
-
 function App() {
 
     return (
         <div className="App">
-            <Header />
-            <Links />
-            <Footer />
+            <Header/>
+            <Links/>
+            <Footer/>
         </div>
     );
 }

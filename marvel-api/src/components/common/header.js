@@ -1,25 +1,17 @@
 import {Container, Row, Col} from 'reactstrap';
 import React from 'react';
+import SearchHeroes from '../searchSeries';
 
-function Header() {
+export default class Header extends React.Component {
 
-    return (
-        <Container>
-            <Row>
-                <Col>
-                    <h1>Marvel</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <input className="input" type="text"></input>
-                    <button>
-                        <strong>search</strong>
-                    </button>
-                </Col>
-            </Row>
-        </Container>
-    )
+    render() {
+        return (
+            <Container className="headerWrapper">
+                <h1>Marvel Search</h1>
+                <SearchHeroes/>
+            </Container>
+
+        )
+    }
+
 }
-
-export default Header;

@@ -2,22 +2,22 @@ import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import {Spinner} from 'reactstrap';
-import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
+import {Card, CardImg, CardText, CardTitle} from 'reactstrap'
 
-export default class Featured extends React.Component {
+export default class Heroes extends React.Component {
 
     state = {
         loading: true,
-        featured: null
-    };
+        heroes: null,
+    }
 
     componentDidMount() {
         axios
-            .get("http://gateway.marvel.com/v1/public/series?ts=1&apikey=f0b6fb5f90e9139ed2f1514d0" +
-                "139fb15&hash=ccb8f319be84ea5586be53927142ff35")
+            .get("http://gateway.marvel.com/v1/public/characters?ts=1&apikey=f0b6fb5f90e9139ed2f15" +
+                "14d0139fb15&hash=ccb8f319be84ea5586be53927142ff35")
             .then((Response) => {
                 console.log(Response)
-                this.setState({featured: Response.data.data.results, loading: false})
+                this.setState({heroes: Response.data.data.results, loading: false})
             })
     }
 
@@ -32,7 +32,7 @@ export default class Featured extends React.Component {
             )
         }
 
-        if (!this.state.featured) {
+        if (!this.state.heroes) {
             return (
                 <Container>
                     <Row>Nothing to show</Row>
@@ -44,12 +44,12 @@ export default class Featured extends React.Component {
             <div className="contentContainer">
                 {this
                     .state
-                    .featured
+                    .heroes
                     .map((card, index) => (
                         <Card className="cardContainer" key={index}>
                             <CardImg src={`${card.thumbnail.path}.${card.thumbnail.extension}`}/>
-                            <CardTitle>{card.title}</CardTitle>
-                            <CardText className="hide">{card.startYear}</CardText>
+                            <CardTitle>{card.name}</CardTitle>
+                            <CardText className="hide">{card.description}</CardText>
                         </Card>
                     ))}
             </div>
