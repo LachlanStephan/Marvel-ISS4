@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Marvel-ISS4/static/css/main.d4dc4e7a.chunk.css",
-    "main.js": "/Marvel-ISS4/static/js/main.76c8240f.chunk.js",
-    "main.js.map": "/Marvel-ISS4/static/js/main.76c8240f.chunk.js.map",
+    "main.js": "/Marvel-ISS4/static/js/main.5af7117c.chunk.js",
+    "main.js.map": "/Marvel-ISS4/static/js/main.5af7117c.chunk.js.map",
     "runtime-main.js": "/Marvel-ISS4/static/js/runtime-main.66f6405b.js",
     "runtime-main.js.map": "/Marvel-ISS4/static/js/runtime-main.66f6405b.js.map",
     "static/css/2.95f25948.chunk.css": "/Marvel-ISS4/static/css/2.95f25948.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.95f25948.chunk.css",
     "static/js/2.50caa24f.chunk.js",
     "static/css/main.d4dc4e7a.chunk.css",
-    "static/js/main.76c8240f.chunk.js"
+    "static/js/main.5af7117c.chunk.js"
   ]
 }
