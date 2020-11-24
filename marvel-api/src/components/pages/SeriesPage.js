@@ -4,6 +4,11 @@ import axios from 'axios';
 import {Spinner} from 'reactstrap';
 import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+const seriesURL = 'http://gateway.marvel.com/v1/public/series?';
+
+
 export default class Featured extends React.Component {
 
     state = {
@@ -13,8 +18,7 @@ export default class Featured extends React.Component {
 
     componentDidMount() {
         axios
-            .get("http://gateway.marvel.com/v1/public/series?ts=1&apikey=f0b6fb5f90e9139ed2f1514d0" +
-                "139fb15&hash=ccb8f319be84ea5586be53927142ff35")
+            .get(seriesURL + API_KEY)
             .then((Response) => {
                 console.log(Response)
                 this.setState({featured: Response.data.data.results, loading: false})

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Container } from 'reactstrap';
-import SearchSeries from './components/searchSeries';
 
 ReactDOM.render(
   <React.StrictMode>

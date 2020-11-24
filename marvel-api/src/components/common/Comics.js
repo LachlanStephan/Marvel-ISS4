@@ -6,12 +6,12 @@ import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
 
         const comicURL = 'https://gateway.marvel.com/v1/public/comics?title=';
 
-        const creds = '&ts=1&apikey=f0b6fb5f90e9139ed2f1514d0139fb15&hash=ccb8f319be84ea5586be53927142ff35'
+        const API_KEY = process.env.REACT_APP_API_KEY;
 
         const [characterData, setCharacterData] = useState([]);
 
         useEffect(() => {
-            axios.get(comicURL + searchVal + creds)
+            axios.get(comicURL + searchVal + API_KEY)
             .then((response) => {
                 console.log(response.data.data.results)
                 setCharacterData(response.data.data.results);

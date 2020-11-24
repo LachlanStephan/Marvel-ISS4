@@ -4,6 +4,11 @@ import axios from 'axios';
 import {Spinner} from 'reactstrap';
 import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
+  const comicURL = 'https://gateway.marvel.com/v1/public/comics?';
+
+
 export default class Comics extends React.Component {
 
     state = {
@@ -12,10 +17,12 @@ export default class Comics extends React.Component {
         searchedValue: ''
     }
 
+  
+
+
     componentDidMount() {
         axios
-            .get('http://gateway.marvel.com/v1/public/comics?&apikey=f0b6fb5f90e9139ed2f1514d0139f' +
-                'b15&ts=1&hash=ccb8f319be84ea5586be53927142ff35')
+            .get(comicURL + API_KEY)
             .then((Response) => {
                 console.log(Response)
                 this.setState({comic: Response.data.data.results, loading: false})
