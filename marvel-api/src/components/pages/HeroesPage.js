@@ -4,9 +4,9 @@ import axios from 'axios';
 import {Spinner} from 'reactstrap';
 import {Card, CardImg, CardText, CardTitle} from 'reactstrap'
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-
 const heroURL = 'https://gateway.marvel.com/v1/public/characters?';
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default class Heroes extends React.Component {
 
