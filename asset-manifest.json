@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4dc4e7a.chunk.css",
-    "main.js": "/static/js/main.b3486f92.chunk.js",
-    "main.js.map": "/static/js/main.b3486f92.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6e5b03c6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6e5b03c6.js.map",
-    "static/css/2.95f25948.chunk.css": "/static/css/2.95f25948.chunk.css",
-    "static/js/2.23d3cafa.chunk.js": "/static/js/2.23d3cafa.chunk.js",
-    "static/js/2.23d3cafa.chunk.js.map": "/static/js/2.23d3cafa.chunk.js.map",
-    "static/js/3.63bdd13d.chunk.js": "/static/js/3.63bdd13d.chunk.js",
-    "static/js/3.63bdd13d.chunk.js.map": "/static/js/3.63bdd13d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.95f25948.chunk.css.map": "/static/css/2.95f25948.chunk.css.map",
-    "static/css/main.d4dc4e7a.chunk.css.map": "/static/css/main.d4dc4e7a.chunk.css.map",
-    "static/js/2.23d3cafa.chunk.js.LICENSE.txt": "/static/js/2.23d3cafa.chunk.js.LICENSE.txt"
+    "main.css": "/Marvel-ISS4/static/css/main.d4dc4e7a.chunk.css",
+    "main.js": "/Marvel-ISS4/static/js/main.76c8240f.chunk.js",
+    "main.js.map": "/Marvel-ISS4/static/js/main.76c8240f.chunk.js.map",
+    "runtime-main.js": "/Marvel-ISS4/static/js/runtime-main.66f6405b.js",
+    "runtime-main.js.map": "/Marvel-ISS4/static/js/runtime-main.66f6405b.js.map",
+    "static/css/2.95f25948.chunk.css": "/Marvel-ISS4/static/css/2.95f25948.chunk.css",
+    "static/js/2.50caa24f.chunk.js": "/Marvel-ISS4/static/js/2.50caa24f.chunk.js",
+    "static/js/2.50caa24f.chunk.js.map": "/Marvel-ISS4/static/js/2.50caa24f.chunk.js.map",
+    "static/js/3.63bdd13d.chunk.js": "/Marvel-ISS4/static/js/3.63bdd13d.chunk.js",
+    "static/js/3.63bdd13d.chunk.js.map": "/Marvel-ISS4/static/js/3.63bdd13d.chunk.js.map",
+    "index.html": "/Marvel-ISS4/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/Marvel-ISS4/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.d4dc4e7a.chunk.css.map": "/Marvel-ISS4/static/css/main.d4dc4e7a.chunk.css.map",
+    "static/js/2.50caa24f.chunk.js.LICENSE.txt": "/Marvel-ISS4/static/js/2.50caa24f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e5b03c6.js",
+    "static/js/runtime-main.66f6405b.js",
     "static/css/2.95f25948.chunk.css",
-    "static/js/2.23d3cafa.chunk.js",
+    "static/js/2.50caa24f.chunk.js",
     "static/css/main.d4dc4e7a.chunk.css",
-    "static/js/main.b3486f92.chunk.js"
+    "static/js/main.76c8240f.chunk.js"
   ]
 }
