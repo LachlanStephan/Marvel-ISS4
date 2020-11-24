@@ -6,7 +6,7 @@ import {Card, CardImg, CardText, CardTitle} from 'reactstrap'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const heroURL = 'http://gateway.marvel.com/v1/public/characters?';
+const heroURL = 'https://gateway.marvel.com/v1/public/characters?';
 
 export default class Heroes extends React.Component {
 

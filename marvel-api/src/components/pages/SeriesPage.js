@@ -6,7 +6,7 @@ import {Card, CardImg, CardText, CardTitle} from 'reactstrap';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const seriesURL = 'http://gateway.marvel.com/v1/public/series?';
+const seriesURL = 'https://gateway.marvel.com/v1/public/series?';
 
 
 export default class Featured extends React.Component {
