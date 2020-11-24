@@ -13,7 +13,8 @@ Body {
   padding: 2em;
 }
 
-h1, h3 {
+h1,
+h3 {
   text-shadow: 1px 2px black;
   color: black
 }
@@ -31,7 +32,8 @@ input {
   box-shadow: 5px 1px black;
   background-color: beige;
   color: black;
-  padding: 0.5em;
+  margin: 0 auto;
+  padding: 0.2em;
 }
 
 input:active {
@@ -40,25 +42,21 @@ input:active {
 }
 
 input:focus {
-    outline-width: 0;
-    background-color: bisque;
-    color: black;
+  outline-width: 0;
+  background-color: bisque;
+  color: black;
 }
 
-button, .reset {
+button,
+.reset {
   margin: 0 auto;
   margin-top: 1em;
   padding: 0.5em;
   width: 10em;
   border-radius: 20px;
-  border: 1px solid red;
+  border: 3px solid red;
   box-shadow: 5px 5px darkred;
   background-color: beige;
-}
-
-button:active, button:focus {
-  outline: none;
-  background-color: bisque;
 }
 
 /* Links */
@@ -72,14 +70,15 @@ a {
   text-transform: uppercase;
   color: black;
   border-radius: 20px;
-  border: 1px solid red;
+  border: 3px solid red;
   box-shadow: 5px 5px darkred;
   padding: 0.5em;
   border-radius: 5px;
   background-color: beige;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   color: black;
   text-decoration: none;
   border: 5px solid black;
@@ -93,7 +92,7 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, button:hover {
   color: black;
   padding: 0.5em;
   text-decoration: none;
@@ -110,27 +109,28 @@ a:hover {
 }
 
 .contentContainer {
- display: flex;
- flex-direction: row;
- width: auto;
- flex-wrap: wrap;
- margin: 0 auto;
- padding: 3em;
- justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 3em;
+  justify-content: space-evenly;
 }
 
-.card, .featuredCard { 
- flex-direction: column;
- width: 400px;
- margin: 1em;
- padding: 0.5em;
- text-align: center;
- align-items: center;
- border-radius: 10px;
- transition: background-color 0.6s ease;
- background-color: beige;
- border: 1px solid red;
- box-shadow: 5px 5px darkred;
+.card,
+.featuredCard {
+  flex-direction: column;
+  width: 400px;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.6s ease;
+  background-color: beige;
+  border: 1px solid red;
+  box-shadow: 5px 5px darkred;
 }
 
 .card:hover {
@@ -138,7 +138,7 @@ a:hover {
   color: white;
 }
 
-.card:hover > .card-text {
+.card:hover>.card-text {
   visibility: visible;
 }
 
@@ -146,13 +146,13 @@ a:hover {
   display: none;
 }
 
-.card:hover > .hide {
+.card:hover>.hide {
   display: block;
-} 
+}
 
 .card-img {
   padding: 1em;
-  width: 300px;
+  width: 200px;
 }
 
 
@@ -166,6 +166,8 @@ a:hover {
     width: 100%;
   }
 
+  .card-img {
+    width: 300px;
+  }
+
 }
-
-
